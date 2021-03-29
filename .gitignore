@@ -2,6 +2,10 @@
 Debug/
 Release/
 .vs/
+*.suo
+*.user
+bin
+obj
 
 LoginInfo.cs
 
