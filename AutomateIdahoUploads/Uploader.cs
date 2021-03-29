@@ -29,7 +29,7 @@ namespace AutomateIdahoUploads
 
         public void InputCompletions(IEnumerable<Completion> completions)
         {
-            _driver.Url = "https://launchpad.cebroker.com/login";
+            _driver.Url = _loginInfo.IdahoLoginUrl;
             _driver.Manage().Window.Maximize();
             IWebElement usernameInput = _driver.FindElement(By.Id("username"));
             IWebElement passwordInput = _driver.FindElement(By.Id("password"));

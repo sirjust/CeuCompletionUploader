@@ -1,5 +1,8 @@
 ﻿using AutomateWashingtonUploads.Helpers;
 using AutomateWashingtonUploads.StaticData;
+using CommonCode.Helpers;
+using CommonCode.Models;
+using CommonCode.StaticData;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -158,7 +161,7 @@ namespace AutomateWashingtonUploads
 
         public void LoginToWebsite()
         {
-            _driver.Url = _loginInfo.LoginUrl;
+            _driver.Url = _loginInfo.WashingtonLoginUrl;
             _driver.Manage().Window.Maximize();
 
             //_driver.FindElement(By.Id("username")).SendKeys(_loginInfo.Id);

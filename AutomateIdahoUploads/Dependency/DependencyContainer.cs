@@ -1,4 +1,7 @@
-﻿using CommonCode.Data;
+﻿using AutomateIdahoUploads.Helpers;
+using CommonCode.Data;
+using CommonCode.Helpers;
+using CommonCode.Models;
 using CommonCode.StaticData;
 using Ninject.Modules;
 using OpenQA.Selenium;
@@ -12,11 +15,10 @@ namespace AutomateIdahoUploads.Dependency
         {
             Bind<ILoginInfo>().To<LoginInfo>();
             Bind<IWebDriver>().To<ChromeDriver>();
-            //Bind<IUploader>().To<Uploader>();
-            //Bind<IErrorHelper>().To<ErrorHelper>();
-            //Bind<ILogger>().To<Logger>();
-            //Bind<IEmailHelper>().To<EmailHelper>();
-            //Bind<IValidationHelper>().To<ValidationHelper>();
+            Bind<IUploader>().To<Uploader>();
+            Bind<IErrorHelper>().To<ErrorHelper>();
+            Bind<ILogger>().To<Logger>();
+            Bind<IEmailHelper>().To<EmailHelper>();
             Bind<ICompletionRepository>().To<CompletionRepository>();
         }
     }
