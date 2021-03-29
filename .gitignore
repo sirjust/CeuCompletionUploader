@@ -1,0 +1,7 @@
+/packages
+Debug/
+Release/
+.vs/
+
+LoginInfo.cs
+
